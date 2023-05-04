@@ -1,0 +1,100 @@
+module endian_swap_32b(input logic[31:0] val_in, output logic[31:0] val_out);
+//|   31 30 29 28 - 27 26 25 24 - 23 22 21 20 - 19 18 17 16 - 15 14 13 12 - 11 10 9 8 - 7 6 5 4 - 3 2 1 0   |
+//-------------------------------------------------|---------------------------------------------------------
+//                                                 |
+//                                                 V
+// ----------------------------------------------------------------------------------------------------------
+// | 7 6 5 4 - 3 2 1 0 -- 15 14 13 12 - 11 10 9 8 -- 23 22 21 20 - 19 18 17 16 -- 31 30 29 28 - 27 26 25 24 |
+	always_comb begin
+			val_out <= {val_in[7:0],val_in[15:8],val_in[23:16],val_in[31:24]};
+	end
+endmodule
+
+module inc_reg_val(input logic[31:0] val_in, output logic [31:0] val_out, output logic cmplt_flg);
+logic [31:0] reg_1;
+endian_swap_32b inst0(reg_1, val_out);
+
+always @(val_in) begin
+	cmplt_flg <= 1'b0;
+	reg_1<={val_in[7:0],val_in[15:8],val_in[23:16],val_in[31:24]}+1'b1;
+end
+
+always @(val_out) begin
+	cmplt_flg <= 1'b1;
+end
+
+
+endmodule
+
+
+module inc_nonce_TB();
+logic clk, vrsn_updt_clk, en, inc_non_flg_clk, inc_non_flg = 1'b1, non_inc_flg = 1'b1;
+logic[31:0] nxt_nonce ,_crnt_nonce;
+logic [3:0] idx;
+
+assign inc_non_flg_clk = clk && inc_non_flg && non_inc_flg;
+
+inc_reg_val ins_0(_crnt_nonce,nxt_nonce,non_inc_flg);
+
+	initial begin
+		idx = 0;
+		_crnt_nonce = 32'h48750833;
+		repeat (10) begin
+			clk<=1'b1; #1;
+			clk<=1'b0; #1;
+		end
+	end
+
+	always @(posedge non_inc_flg) begin
+		$display("idx: %d | non_inc_flg: %b  | _crnt_nonce: %h   | nxt_nonce: %h 	", idx, non_inc_flg, _crnt_nonce, nxt_nonce);
+		if (inc_non_flg == 1'b1 && non_inc_flg == 1'b1) begin
+			if (4999 >= idx)
+				_crnt_nonce <= nxt_nonce;
+			else begin 
+				#1;
+				if (9999 >= idx)
+					_crnt_nonce <= nxt_nonce;
+			end
+			//inc_non_flg <= 1'b0;
+			non_inc_flg <= 1'b0;
+		end
+		idx <= idx + 1;		
+	end
+
+endmodule
+
+
+
+//----------------------------|       input             &     output        values
+//# idx:  0 | non_inc_flg: 1  | _crnt_nonce: 48750833   | nxt_nonce: 49750833 	
+//# idx:  1 | non_inc_flg: 1  | _crnt_nonce: 49750833   | nxt_nonce: 4a750833 	
+//# idx:  2 | non_inc_flg: 1  | _crnt_nonce: 4a750833   | nxt_nonce: 4b750833 	
+//# idx:  3 | non_inc_flg: 1  | _crnt_nonce: 4b750833   | nxt_nonce: 4c750833 	
+//# idx:  4 | non_inc_flg: 1  | _crnt_nonce: 4c750833   | nxt_nonce: 4d750833 	
+//# idx:  5 | non_inc_flg: 1  | _crnt_nonce: 4d750833   | nxt_nonce: 4e750833 	
+//# idx:  6 | non_inc_flg: 1  | _crnt_nonce: 4e750833   | nxt_nonce: 4f750833 	
+//# idx:  7 | non_inc_flg: 1  | _crnt_nonce: 4f750833   | nxt_nonce: 50750833 	
+//# idx:  8 | non_inc_flg: 1  | _crnt_nonce: 50750833   | nxt_nonce: 51750833 	
+//# idx:  9 | non_inc_flg: 1  | _crnt_nonce: 51750833   | nxt_nonce: 52750833 	
+//# idx: 10 | non_inc_flg: 1  | _crnt_nonce: 52750833   | nxt_nonce: 53750833 	
+//# idx: 11 | non_inc_flg: 1  | _crnt_nonce: 53750833   | nxt_nonce: 54750833 	
+//# idx: 12 | non_inc_flg: 1  | _crnt_nonce: 54750833   | nxt_nonce: 55750833 	
+//# idx: 13 | non_inc_flg: 1  | _crnt_nonce: 55750833   | nxt_nonce: 56750833 	
+//# idx: 14 | non_inc_flg: 1  | _crnt_nonce: 56750833   | nxt_nonce: 57750833 	
+//# idx: 15 | non_inc_flg: 1  | _crnt_nonce: 57750833   | nxt_nonce: 58750833 	
+//# idx:  0 | non_inc_flg: 1  | _crnt_nonce: f8750833   | nxt_nonce: f9750833 	
+//# idx:  1 | non_inc_flg: 1  | _crnt_nonce: f9750833   | nxt_nonce: fa750833 	
+//# idx:  2 | non_inc_flg: 1  | _crnt_nonce: fa750833   | nxt_nonce: fb750833 	
+//# idx:  3 | non_inc_flg: 1  | _crnt_nonce: fb750833   | nxt_nonce: fc750833 	
+//# idx:  4 | non_inc_flg: 1  | _crnt_nonce: fc750833   | nxt_nonce: fd750833 	
+//# idx:  5 | non_inc_flg: 1  | _crnt_nonce: fd750833   | nxt_nonce: fe750833 	
+//# idx:  6 | non_inc_flg: 1  | _crnt_nonce: fe750833   | nxt_nonce: ff750833 	
+//# idx:  7 | non_inc_flg: 1  | _crnt_nonce: ff750833   | nxt_nonce: 00760833 	
+//# idx:  8 | non_inc_flg: 1  | _crnt_nonce: 00760833   | nxt_nonce: 01760833 	
+//# idx:  9 | non_inc_flg: 1  | _crnt_nonce: 01760833   | nxt_nonce: 02760833 	
+//# idx: 10 | non_inc_flg: 1  | _crnt_nonce: 02760833   | nxt_nonce: 03760833 	
+//# idx: 11 | non_inc_flg: 1  | _crnt_nonce: 03760833   | nxt_nonce: 04760833 	
+//# idx: 12 | non_inc_flg: 1  | _crnt_nonce: 04760833   | nxt_nonce: 05760833 	
+//# idx: 13 | non_inc_flg: 1  | _crnt_nonce: 05760833   | nxt_nonce: 06760833 	
+//# idx: 14 | non_inc_flg: 1  | _crnt_nonce: 06760833   | nxt_nonce: 07760833 	
+//# idx: 15 | non_inc_flg: 1  | _crnt_nonce: 07760833   | nxt_nonce: 08760833 	

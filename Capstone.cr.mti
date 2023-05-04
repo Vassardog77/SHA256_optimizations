@@ -1,0 +1,187 @@
+C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Core_Mod.sv {2 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Core_Mod.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Core
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Core_Mod.sv(107): (vlog-2182) '_rst' might be read before written in always_comb or always @* block.
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Core_Mod.sv(110): (vlog-2182) 'he_rst' might be read before written in always_comb or always @* block.
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Core_Mod.sv(104): (vlog-2182) 'rst_cntr' might be read before written in always_comb or always @* block.
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Core_Mod.sv(234): (vlog-2182) 'inc_non_flg_0' might be read before written in always_comb or always @* block.
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Core_Mod.sv(234): (vlog-2182) 'inc_non_flg_1' might be read before written in always_comb or always @* block.
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Core_Mod.sv(234): (vlog-2182) 'inc_non_flg_2' might be read before written in always_comb or always @* block.
+-- Compiling module inc_reg_val
+
+Top level modules:
+	Core
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/HashEngine.sv {2 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/HashEngine.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module HashEngine
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/HashEngine.sv(151): (vlog-2182) 'blk_fnd' might be read before written in always_comb or always @* block.
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/HashEngine.sv(148): (vlog-2182) 'cmpltn_flg' might be read before written in always_comb or always @* block.
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/HashEngine.sv(154): (vlog-2182) 'inc_non' might be read before written in always_comb or always @* block.
+-- Compiling module calc_target
+
+Top level modules:
+	HashEngine
+	calc_target
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/uart_tx.v {1 {vlog -work work -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/uart_tx.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uart_tx
+
+Top level modules:
+	uart_tx
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Supr_Mods.sv {1 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Supr_Mods.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module rotr
+-- Compiling module rotr_32
+-- Compiling module sig_0
+-- Compiling module sig_1
+-- Compiling module Sig0
+-- Compiling module Sig1
+-- Compiling module maj
+-- Compiling module ch
+-- Compiling module counter
+-- Compiling module counter_alt
+-- Compiling module fdivby25K
+-- Compiling module pmcntr
+
+Top level modules:
+	rotr
+	sig_0
+	sig_1
+	Sig0
+	Sig1
+	maj
+	ch
+	counter
+	counter_alt
+	fdivby25K
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/uart_cmd_if.sv {1 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/uart_cmd_if.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uart_cmd_if
+
+Top level modules:
+	uart_cmd_if
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Test_Benchs(2).sv {2 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Test_Benchs(2).sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module endian_TB
+-- Compiling module get_vrn_TB
+-- Compiling module inc_nonce_TB
+-- Compiling module calc_target_tb
+-- Compiling module HashEngine_tb
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Test_Benchs(2).sv(846): (vlog-2182) '_rst' might be read before written in always_comb or always @* block.
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Test_Benchs(2).sv(843): (vlog-2182) 'rst_cntr' might be read before written in always_comb or always @* block.
+-- Compiling module core_sim_tb
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Test_Benchs(2).sv(1062): (vlog-2182) '_rst' might be read before written in always_comb or always @* block.
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Test_Benchs(2).sv(1065): (vlog-2182) 'he_rst' might be read before written in always_comb or always @* block.
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/Test_Benchs(2).sv(1059): (vlog-2182) 'rst_cntr' might be read before written in always_comb or always @* block.
+-- Compiling module core_tb
+-- Compiling module ECM_tb
+
+Top level modules:
+	endian_TB
+	get_vrn_TB
+	inc_nonce_TB
+	calc_target_tb
+	HashEngine_tb
+	core_sim_tb
+	core_tb
+	ECM_tb
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/dSHA256.sv {2 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/dSHA256.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module dSHA256
+** Warning: C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/dSHA256.sv(30): (vlog-2182) 'hash_pad[0]' might be read before written in always_comb or always @* block.
+-- Compiling module dSHA256_tb
+
+Top level modules:
+	dSHA256_tb
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/uart_rsp_if.sv {1 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/uart_rsp_if.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uart_rsp_if
+
+Top level modules:
+	uart_rsp_if
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/UARTmod_2_ECM_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/UARTmod_2_ECM_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module UARTmod_2_ECM_tb
+
+Top level modules:
+	UARTmod_2_ECM_tb
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/SCHr.sv {1 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/SCHr.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SCHr
+-- Compiling module SCHr_tb
+
+Top level modules:
+	SCHr_tb
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/SHA256.sv {1 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/SHA256.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SHA256
+
+Top level modules:
+	SHA256
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/CMPr.sv {1 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/CMPr.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CMPr
+-- Compiling module CMPr_tb
+
+Top level modules:
+	CMPr_tb
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/KtWt.sv {1 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/KtWt.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module KtWt
+
+Top level modules:
+	KtWt
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/SCHr_top.sv {1 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/SCHr_top.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SCHr_top
+
+Top level modules:
+	SCHr_top
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/UART_MOD.sv {1 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/UART_MOD.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module UART
+
+Top level modules:
+	UART
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/clock_unit.sv {1 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/clock_unit.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module clock_unit
+-- Compiling module Clock_Tick
+-- Compiling module cnt_to_60
+
+Top level modules:
+	clock_unit
+	cnt_to_60
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/uart_rx.sv {1 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/uart_rx.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uart_rx
+
+Top level modules:
+	uart_rx
+
+} {} {}} C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/ECM.sv {1 {vlog -work work -sv -stats=none C:/Users/Ben/Desktop/AsicBoost+UART_V1.0.2/ECM.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ECM
+-- Compiling module get_vrns
+-- Compiling module endian_swap_32b
+
+Top level modules:
+	ECM
+
+} {} {}}

@@ -1,0 +1,153 @@
+E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/uart_tx.v {1 {vlog -work work -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/uart_tx.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uart_tx
+
+Top level modules:
+	uart_tx
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/uart_rx.sv {1 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/uart_rx.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uart_rx
+
+Top level modules:
+	uart_rx
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/ECM.sv {1 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/ECM.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ECM
+-- Compiling module get_vrns
+-- Compiling module endian_swap_32b
+
+Top level modules:
+	ECM
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/UARTmod_2_ECM_tb.sv {1 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/UARTmod_2_ECM_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module UARTmod_2_ECM_tb
+
+Top level modules:
+	UARTmod_2_ECM_tb
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/SCHr.sv {1 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/SCHr.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SCHr
+-- Compiling module SCHr_tb
+
+Top level modules:
+	SCHr_tb
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/SHA256.sv {1 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/SHA256.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SHA256
+
+Top level modules:
+	SHA256
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/KtWt.sv {1 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/KtWt.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module KtWt
+
+Top level modules:
+	KtWt
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/SCHr_top.sv {1 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/SCHr_top.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SCHr_top
+
+Top level modules:
+	SCHr_top
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/UART_MOD.sv {1 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/UART_MOD.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module UART
+
+Top level modules:
+	UART
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/clock_unit.sv {1 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/clock_unit.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module clock_unit
+-- Compiling module Clock_Tick
+-- Compiling module cnt_to_60
+
+Top level modules:
+	clock_unit
+	cnt_to_60
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/Supr_Mods.sv {1 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/Supr_Mods.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module rotr
+-- Compiling module rotr_32
+-- Compiling module sig_0
+-- Compiling module sig_1
+-- Compiling module Sig0
+-- Compiling module Sig1
+-- Compiling module maj
+-- Compiling module ch
+-- Compiling module counter
+-- Compiling module counter_alt
+-- Compiling module fdivby25K
+-- Compiling module pmcntr
+
+Top level modules:
+	rotr
+	sig_0
+	sig_1
+	Sig0
+	Sig1
+	maj
+	ch
+	counter
+	counter_alt
+	fdivby25K
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/dSHA256.sv {2 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/dSHA256.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module dSHA256
+** Warning: E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/dSHA256.sv(30): (vlog-2182) 'hash_pad[0]' might be read before written in always_comb or always @* block.
+-- Compiling module dSHA256_tb
+
+Top level modules:
+	dSHA256_tb
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/uart_cmd_if.sv {1 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/uart_cmd_if.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uart_cmd_if
+
+Top level modules:
+	uart_cmd_if
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/uart_rsp_if.sv {1 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/uart_rsp_if.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uart_rsp_if
+
+Top level modules:
+	uart_rsp_if
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/Core_Mod.sv {2 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/Core_Mod.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Core
+** Warning: E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/Core_Mod.sv(107): (vlog-2182) '_rst' might be read before written in always_comb or always @* block.
+** Warning: E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/Core_Mod.sv(110): (vlog-2182) 'he_rst' might be read before written in always_comb or always @* block.
+** Warning: E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/Core_Mod.sv(104): (vlog-2182) 'rst_cntr' might be read before written in always_comb or always @* block.
+** Warning: E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/Core_Mod.sv(234): (vlog-2182) 'inc_non_flg_0' might be read before written in always_comb or always @* block.
+** Warning: E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/Core_Mod.sv(234): (vlog-2182) 'inc_non_flg_1' might be read before written in always_comb or always @* block.
+** Warning: E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/Core_Mod.sv(234): (vlog-2182) 'inc_non_flg_2' might be read before written in always_comb or always @* block.
+-- Compiling module inc_reg_val
+
+Top level modules:
+	Core
+
+} {} {}} E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/HashEngine.sv {2 {vlog -work work -sv -stats=none E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/HashEngine.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module HashEngine
+** Warning: E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/HashEngine.sv(151): (vlog-2182) 'blk_fnd' might be read before written in always_comb or always @* block.
+** Warning: E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/HashEngine.sv(148): (vlog-2182) 'cmpltn_flg' might be read before written in always_comb or always @* block.
+** Warning: E:/NicksFolder/SCHOOL/EEE488_EEE489-Capstone/SHA256/ModelSim/Working_POC/AsicBoost+UART/HashEngine.sv(154): (vlog-2182) 'inc_non' might be read before written in always_comb or always @* block.
+-- Compiling module calc_target
+
+Top level modules:
+	HashEngine
+	calc_target
+
+} {} {}}

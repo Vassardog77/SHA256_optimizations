@@ -1,0 +1,305 @@
+# Input =        020000007179b5791ce81d7f2e55da2f7995b95533e0ad8b87308c711000000000000000a87992a572744b1f0a3b49d83f9930440c1ef96a2b9bb2a3918c6eabcd417178358B0553535F011948750833
+# Input =        0200000017975b97c18ed1f7e255adf297599b55330edab87803c81701000000000000008a97295a2747b4f1a0b3948df3990344c0e19fa6b2b92b3a19c8e6badc141787358b0553535f011910000000
+#   msg =        0200000017975b97c18ed1f7e255adf297599b55330edab87803c81701000000000000008a97295a2747b4f1a0b3948df3990344c0e19fa6b2b92b3a19c8e6badc141787358b0553535f011910000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000280
+# data chunk 1 = 0200000017975b97c18ed1f7e255adf297599b55330edab87803c81701000000000000008a97295a2747b4f1a0b3948df3990344c0e19fa6b2b92b3a19c8e6ba
+# data chunk 2 = dc141787358b0553535f011910000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000280
+# A  = 6a09e667
+# B  = bb67ae85
+# C  = 3c6ef372
+# D  = a54ff53a
+# E  = 510e527f
+# F  = 9b05688c
+# G  = 1f83d9ab
+# H  = 5be0cd19
+# wrd_ary[0]  = 02000000
+# wrd_ary[1]  = 17975b97
+# wrd_ary[2]  = c18ed1f7
+# wrd_ary[3]  = e255adf2
+# wrd_ary[4]  = 97599b55
+# wrd_ary[5]  = 330edab8
+# wrd_ary[6]  = 7803c817
+# wrd_ary[7]  = 01000000
+# wrd_ary[8]  = 00000000
+# wrd_ary[9]  = 8a97295a
+# wrd_ary[10]  = 2747b4f1
+# wrd_ary[11]  = a0b3948d
+# wrd_ary[12]  = f3990344
+# wrd_ary[13]  = c0e19fa6
+# wrd_ary[14]  = b2b92b3a
+# wrd_ary[15]  = 19c8e6ba
+# idx   |     A      |      B      |      C      |      D      |      E      |      F      |      G      |      H      |      kt     |      wt     |
+# --------------------------------------------------------------------------------------------------------------------------------------------------
+#   0   |  6a09e667  |   bb67ae85  |   3c6ef372  |   a54ff53a  |   510e527f  |   9b05688c  |   1f83d9ab  |   5be0cd19  |   428a2f98  |   02000000  |
+#   0   |  fe08884d  |   6a09e667  |   bb67ae85  |   3c6ef372  |   9ac7e2a2  |   510e527f  |   9b05688c  |   1f83d9ab  |   428a2f98  |   02000000  |
+#   1   |  90f86e30  |   fe08884d  |   6a09e667  |   bb67ae85  |   b390cdae  |   9ac7e2a2  |   510e527f  |   9b05688c  |   71374491  |   17975b97  |
+#   2   |  5a6e3c2c  |   90f86e30  |   fe08884d  |   6a09e667  |   67ca9e40  |   b390cdae  |   9ac7e2a2  |   510e527f  |   b5c0fbcf  |   c18ed1f7  |
+#   3   |  2eeed510  |   5a6e3c2c  |   90f86e30  |   fe08884d  |   6f86a238  |   67ca9e40  |   b390cdae  |   9ac7e2a2  |   e9b5dba5  |   e255adf2  |
+#   4   |  fc4b04fc  |   2eeed510  |   5a6e3c2c  |   90f86e30  |   c6f68e90  |   6f86a238  |   67ca9e40  |   b390cdae  |   3956c25b  |   97599b55  |
+#   5   |  45b87e01  |   fc4b04fc  |   2eeed510  |   5a6e3c2c  |   235c075f  |   c6f68e90  |   6f86a238  |   67ca9e40  |   59f111f1  |   330edab8  |
+#   6   |  a7d5ce9c  |   45b87e01  |   fc4b04fc  |   2eeed510  |   54bd7f63  |   235c075f  |   c6f68e90  |   6f86a238  |   923f82a4  |   7803c817  |
+#   7   |  cd8ceb0a  |   a7d5ce9c  |   45b87e01  |   fc4b04fc  |   0c7831e8  |   54bd7f63  |   235c075f  |   c6f68e90  |   ab1c5ed5  |   01000000  |
+#   8   |  05997801  |   cd8ceb0a  |   a7d5ce9c  |   45b87e01  |   63ae1162  |   0c7831e8  |   54bd7f63  |   235c075f  |   d807aa98  |   00000000  |
+#   9   |  b1a6e8b6  |   05997801  |   cd8ceb0a  |   a7d5ce9c  |   8d3305d2  |   63ae1162  |   0c7831e8  |   54bd7f63  |   12835b01  |   8a97295a  |
+#  10   |  0394448b  |   b1a6e8b6  |   05997801  |   cd8ceb0a  |   b35e3d49  |   8d3305d2  |   63ae1162  |   0c7831e8  |   243185be  |   2747b4f1  |
+#  11   |  9c138b96  |   0394448b  |   b1a6e8b6  |   05997801  |   b25cec8f  |   b35e3d49  |   8d3305d2  |   63ae1162  |   550c7dc3  |   a0b3948d  |
+#  12   |  52034008  |   9c138b96  |   0394448b  |   b1a6e8b6  |   1067976a  |   b25cec8f  |   b35e3d49  |   8d3305d2  |   72be5d74  |   f3990344  |
+#  13   |  24edcd02  |   52034008  |   9c138b96  |   0394448b  |   aabf13de  |   1067976a  |   b25cec8f  |   b35e3d49  |   80deb1fe  |   c0e19fa6  |
+#  14   |  db73d92c  |   24edcd02  |   52034008  |   9c138b96  |   74e5f7f8  |   aabf13de  |   1067976a  |   b25cec8f  |   9bdc06a7  |   b2b92b3a  |
+#  15   |  9dd237b2  |   db73d92c  |   24edcd02  |   52034008  |   b6a35b88  |   74e5f7f8  |   aabf13de  |   1067976a  |   c19bf174  |   19c8e6ba  |
+#  16   |  5bfa434e  |   9dd237b2  |   db73d92c  |   24edcd02  |   bdcafd2a  |   b6a35b88  |   74e5f7f8  |   aabf13de  |   e49b69c1  |   37a5cabb  |
+#  17   |  adb10f37  |   5bfa434e  |   9dd237b2  |   db73d92c  |   912b129d  |   bdcafd2a  |   b6a35b88  |   74e5f7f8  |   efbe4786  |   f23a866a  |
+#  18   |  32cdd017  |   adb10f37  |   5bfa434e  |   9dd237b2  |   1961b11a  |   912b129d  |   bdcafd2a  |   b6a35b88  |   0fc19dc6  |   513c2148  |
+#  19   |  0c61c3fc  |   32cdd017  |   adb10f37  |   5bfa434e  |   f2eff9f7  |   1961b11a  |   912b129d  |   bdcafd2a  |   240ca1cc  |   c8c440bb  |
+#  20   |  0a371058  |   0c61c3fc  |   32cdd017  |   adb10f37  |   9d57acaf  |   f2eff9f7  |   1961b11a  |   912b129d  |   2de92c6f  |   ad7e72cd  |
+#  21   |  b5010d57  |   0a371058  |   0c61c3fc  |   32cdd017  |   fc3f56ac  |   9d57acaf  |   f2eff9f7  |   1961b11a  |   4a7484aa  |   623652ee  |
+#  22   |  a79ad845  |   b5010d57  |   0a371058  |   0c61c3fc  |   4a7ef177  |   fc3f56ac  |   9d57acaf  |   f2eff9f7  |   5cb0a9dc  |   8902eb9d  |
+#  23   |  9776df6d  |   a79ad845  |   b5010d57  |   0a371058  |   3c1aeebb  |   4a7ef177  |   fc3f56ac  |   9d57acaf  |   76f988da  |   1bd83b84  |
+#  24   |  ba816087  |   9776df6d  |   a79ad845  |   b5010d57  |   c7d8d96a  |   3c1aeebb  |   4a7ef177  |   fc3f56ac  |   983e5152  |   88eb2561  |
+#  25   |  c3af90db  |   ba816087  |   9776df6d  |   a79ad845  |   d1fe332d  |   c7d8d96a  |   3c1aeebb  |   4a7ef177  |   a831c66d  |   0221f361  |
+#  26   |  431cf2cf  |   c3af90db  |   ba816087  |   9776df6d  |   8e996401  |   d1fe332d  |   c7d8d96a  |   3c1aeebb  |   b00327c8  |   d0bf42e1  |
+#  27   |  6e5e4799  |   431cf2cf  |   c3af90db  |   ba816087  |   0cd11cdf  |   8e996401  |   d1fe332d  |   c7d8d96a  |   bf597fc7  |   ed535f0a  |
+#  28   |  2e92ac99  |   6e5e4799  |   431cf2cf  |   c3af90db  |   87b2b398  |   0cd11cdf  |   8e996401  |   d1fe332d  |   c6e00bf3  |   d15c94bd  |
+#  29   |  88d6b240  |   2e92ac99  |   6e5e4799  |   431cf2cf  |   7887a179  |   87b2b398  |   0cd11cdf  |   8e996401  |   d5a79147  |   384106b6  |
+#  30   |  33563e22  |   88d6b240  |   2e92ac99  |   6e5e4799  |   5ca3a252  |   7887a179  |   87b2b398  |   0cd11cdf  |   06ca6351  |   f63277c6  |
+#  31   |  e7f69e94  |   33563e22  |   88d6b240  |   2e92ac99  |   06418a39  |   5ca3a252  |   7887a179  |   87b2b398  |   14292967  |   486d16af  |
+#  32   |  840d3e42  |   e7f69e94  |   33563e22  |   88d6b240  |   f7a8614d  |   06418a39  |   5ca3a252  |   7887a179  |   27b70a85  |   192780ad  |
+#  33   |  0d9de316  |   840d3e42  |   e7f69e94  |   33563e22  |   872ff16b  |   f7a8614d  |   06418a39  |   5ca3a252  |   2e1b2138  |   7f6207ed  |
+#  34   |  a5434f21  |   0d9de316  |   840d3e42  |   e7f69e94  |   66a08311  |   872ff16b  |   f7a8614d  |   06418a39  |   4d2c6dfc  |   ed7cd950  |
+#  35   |  fa853dc8  |   a5434f21  |   0d9de316  |   840d3e42  |   400cee13  |   66a08311  |   872ff16b  |   f7a8614d  |   53380d13  |   ef7bf837  |
+#  36   |  403eb76f  |   fa853dc8  |   a5434f21  |   0d9de316  |   52b4ce00  |   400cee13  |   66a08311  |   872ff16b  |   650a7354  |   21b1ec1f  |
+#  37   |  dada7b9a  |   403eb76f  |   fa853dc8  |   a5434f21  |   76c90e19  |   52b4ce00  |   400cee13  |   66a08311  |   766a0abb  |   6c64da44  |
+#  38   |  7e295bdd  |   dada7b9a  |   403eb76f  |   fa853dc8  |   454047d6  |   76c90e19  |   52b4ce00  |   400cee13  |   81c2c92e  |   a2a1ccd2  |
+#  39   |  f2816896  |   7e295bdd  |   dada7b9a  |   403eb76f  |   6ebd583a  |   454047d6  |   76c90e19  |   52b4ce00  |   92722c85  |   46c62f95  |
+#  40   |  991065f9  |   f2816896  |   7e295bdd  |   dada7b9a  |   e1100be6  |   6ebd583a  |   454047d6  |   76c90e19  |   a2bfe8a1  |   a6c117c7  |
+#  41   |  bf895d41  |   991065f9  |   f2816896  |   7e295bdd  |   98433765  |   e1100be6  |   6ebd583a  |   454047d6  |   a81a664b  |   cad769d7  |
+#  42   |  eece3a10  |   bf895d41  |   991065f9  |   f2816896  |   10db7a38  |   98433765  |   e1100be6  |   6ebd583a  |   c24b8b70  |   49204920  |
+#  43   |  335dd5ee  |   eece3a10  |   bf895d41  |   991065f9  |   927a05e5  |   10db7a38  |   98433765  |   e1100be6  |   c76c51a3  |   ad8f54fd  |
+#  44   |  8df331c7  |   335dd5ee  |   eece3a10  |   bf895d41  |   1244e328  |   927a05e5  |   10db7a38  |   98433765  |   d192e819  |   963d0172  |
+#  45   |  e4e1813d  |   8df331c7  |   335dd5ee  |   eece3a10  |   5303eed9  |   1244e328  |   927a05e5  |   10db7a38  |   d6990624  |   2a886bc6  |
+#  46   |  e39ac1ee  |   e4e1813d  |   8df331c7  |   335dd5ee  |   35a3b93f  |   5303eed9  |   1244e328  |   927a05e5  |   f40e3585  |   6fe1e8d7  |
+#  47   |  64a0686b  |   e39ac1ee  |   e4e1813d  |   8df331c7  |   d574a547  |   35a3b93f  |   5303eed9  |   1244e328  |   106aa070  |   e0fd99e2  |
+#  48   |  53d22be6  |   64a0686b  |   e39ac1ee  |   e4e1813d  |   e15209b3  |   d574a547  |   35a3b93f  |   5303eed9  |   19a4c116  |   02536824  |
+#  49   |  51bf7c77  |   53d22be6  |   64a0686b  |   e39ac1ee  |   4fa5069f  |   e15209b3  |   d574a547  |   35a3b93f  |   1e376c08  |   d298bddb  |
+#  50   |  c6c6b0b0  |   51bf7c77  |   53d22be6  |   64a0686b  |   8e8a7a97  |   4fa5069f  |   e15209b3  |   d574a547  |   2748774c  |   005eb72e  |
+#  51   |  d745701d  |   c6c6b0b0  |   51bf7c77  |   53d22be6  |   391a4690  |   8e8a7a97  |   4fa5069f  |   e15209b3  |   34b0bcb5  |   108dc510  |
+#  52   |  cf16d64c  |   d745701d  |   c6c6b0b0  |   51bf7c77  |   6a22008c  |   391a4690  |   8e8a7a97  |   4fa5069f  |   391c0cb3  |   8d727953  |
+#  53   |  170a6314  |   cf16d64c  |   d745701d  |   c6c6b0b0  |   c687f156  |   6a22008c  |   391a4690  |   8e8a7a97  |   4ed8aa4a  |   f89abeec  |
+#  54   |  4460fd01  |   170a6314  |   cf16d64c  |   d745701d  |   ff32cacb  |   c687f156  |   6a22008c  |   391a4690  |   5b9cca4f  |   a0f06a59  |
+#  55   |  092e76c1  |   4460fd01  |   170a6314  |   cf16d64c  |   5e8ad684  |   ff32cacb  |   c687f156  |   6a22008c  |   682e6ff3  |   3013a711  |
+#  56   |  b27bc6dd  |   092e76c1  |   4460fd01  |   170a6314  |   2ecf5541  |   5e8ad684  |   ff32cacb  |   c687f156  |   748f82ee  |   1e645f7a  |
+#  57   |  6e8ababd  |   b27bc6dd  |   092e76c1  |   4460fd01  |   cfc21270  |   2ecf5541  |   5e8ad684  |   ff32cacb  |   78a5636f  |   ce9b37e5  |
+#  58   |  179d899a  |   6e8ababd  |   b27bc6dd  |   092e76c1  |   8d30607e  |   cfc21270  |   2ecf5541  |   5e8ad684  |   84c87814  |   39d9836e  |
+#  59   |  ee9ace7f  |   179d899a  |   6e8ababd  |   b27bc6dd  |   021c03cf  |   8d30607e  |   cfc21270  |   2ecf5541  |   8cc70208  |   eff74646  |
+#  60   |  3fe7029b  |   ee9ace7f  |   179d899a  |   6e8ababd  |   a06805c6  |   021c03cf  |   8d30607e  |   cfc21270  |   90befffa  |   14a20522  |
+#  61   |  8eab60c2  |   3fe7029b  |   ee9ace7f  |   179d899a  |   766c3d83  |   a06805c6  |   021c03cf  |   8d30607e  |   a4506ceb  |   f05f5326  |
+#  62   |  51019395  |   8eab60c2  |   3fe7029b  |   ee9ace7f  |   b1b63303  |   766c3d83  |   a06805c6  |   021c03cf  |   bef9a3f7  |   a1cce05c  |
+# hreg[0]: fc48d2df = 5be0cd19 + a06805c6
+# hreg[1]: 95f0172e = 1f83d9ab + 766c3d83
+# hreg[2]: 4cbb9b8f = 9b05688c + b1b63303
+# hreg[3]: c3c1b9e4 = 510e527f + 72b36765
+# hreg[4]: e536f7d5 = a54ff53a + 3fe7029b
+# hreg[5]: cb1a5434 = 3c6ef372 + 8eab60c2
+# hreg[6]: 0c69421a = bb67ae85 + 51019395
+# hreg[7]: dc6a3b8d = 6a09e667 + 72605526
+#  63   |  72605526  |   51019395  |   8eab60c2  |   3fe7029b  |   72b36765  |   b1b63303  |   766c3d83  |   a06805c6  |   c67178f2  |   d575768c  |
+# out_hash    = dc6a3b8d0c69421acb1a5434e536f7d5c3c1b9e44cbb9b8f95f0172efc48d2df
+# A  = dc6a3b8d
+# B  = 0c69421a
+# C  = cb1a5434
+# D  = e536f7d5
+# E  = c3c1b9e4
+# F  = 4cbb9b8f
+# G  = 95f0172e
+# H  = fc48d2df
+# wrd_ary[0]  = dc141787
+# wrd_ary[1]  = 358b0553
+# wrd_ary[2]  = 535f0119
+# wrd_ary[3]  = 10000000
+# wrd_ary[4]  = 80000000
+# wrd_ary[5]  = 00000000
+# wrd_ary[6]  = 00000000
+# wrd_ary[7]  = 00000000
+# wrd_ary[8]  = 00000000
+# wrd_ary[9]  = 00000000
+# wrd_ary[10]  = 00000000
+# wrd_ary[11]  = 00000000
+# wrd_ary[12]  = 00000000
+# wrd_ary[13]  = 00000000
+# wrd_ary[14]  = 00000000
+# wrd_ary[15]  = 00000280
+# idx   |     A      |      B      |      C      |      D      |      E      |      F      |      G      |      H      |      kt     |      wt     |
+# --------------------------------------------------------------------------------------------------------------------------------------------------
+#   0   |  dc6a3b8d  |   0c69421a  |   cb1a5434  |   e536f7d5  |   c3c1b9e4  |   4cbb9b8f  |   95f0172e  |   fc48d2df  |   428a2f98  |   dc141787  |
+#   0   |  8ee8f31c  |   dc6a3b8d  |   0c69421a  |   cb1a5434  |   a41b3e12  |   c3c1b9e4  |   4cbb9b8f  |   95f0172e  |   428a2f98  |   dc141787  |
+#   1   |  2faaae43  |   8ee8f31c  |   dc6a3b8d  |   0c69421a  |   55ca55a0  |   a41b3e12  |   c3c1b9e4  |   4cbb9b8f  |   71374491  |   358b0553  |
+#   2   |  4e942a79  |   2faaae43  |   8ee8f31c  |   dc6a3b8d  |   b8c7d70b  |   55ca55a0  |   a41b3e12  |   c3c1b9e4  |   b5c0fbcf  |   535f0119  |
+#   3   |  de40da71  |   4e942a79  |   2faaae43  |   8ee8f31c  |   5b3bd0a0  |   b8c7d70b  |   55ca55a0  |   a41b3e12  |   e9b5dba5  |   10000000  |
+#   4   |  78bd5bd6  |   de40da71  |   4e942a79  |   2faaae43  |   11aea09e  |   5b3bd0a0  |   b8c7d70b  |   55ca55a0  |   3956c25b  |   80000000  |
+#   5   |  3a8424de  |   78bd5bd6  |   de40da71  |   4e942a79  |   55a6adb3  |   11aea09e  |   5b3bd0a0  |   b8c7d70b  |   59f111f1  |   00000000  |
+#   6   |  427a42dc  |   3a8424de  |   78bd5bd6  |   de40da71  |   5dc66c83  |   55a6adb3  |   11aea09e  |   5b3bd0a0  |   923f82a4  |   00000000  |
+#   7   |  4465f22f  |   427a42dc  |   3a8424de  |   78bd5bd6  |   b8729756  |   5dc66c83  |   55a6adb3  |   11aea09e  |   ab1c5ed5  |   00000000  |
+#   8   |  eb0a2cbf  |   4465f22f  |   427a42dc  |   3a8424de  |   49b74302  |   b8729756  |   5dc66c83  |   55a6adb3  |   d807aa98  |   00000000  |
+#   9   |  31643288  |   eb0a2cbf  |   4465f22f  |   427a42dc  |   71eec7d5  |   49b74302  |   b8729756  |   5dc66c83  |   12835b01  |   00000000  |
+#  10   |  0def8bb7  |   31643288  |   eb0a2cbf  |   4465f22f  |   e632f49e  |   71eec7d5  |   49b74302  |   b8729756  |   243185be  |   00000000  |
+#  11   |  b2c09c11  |   0def8bb7  |   31643288  |   eb0a2cbf  |   accb11db  |   e632f49e  |   71eec7d5  |   49b74302  |   550c7dc3  |   00000000  |
+#  12   |  a21d6263  |   b2c09c11  |   0def8bb7  |   31643288  |   ccf4fcc6  |   accb11db  |   e632f49e  |   71eec7d5  |   72be5d74  |   00000000  |
+#  13   |  cc0509e5  |   a21d6263  |   b2c09c11  |   0def8bb7  |   cc87eb3f  |   ccf4fcc6  |   accb11db  |   e632f49e  |   80deb1fe  |   00000000  |
+#  14   |  1427c284  |   cc0509e5  |   a21d6263  |   b2c09c11  |   58099079  |   cc87eb3f  |   ccf4fcc6  |   accb11db  |   9bdc06a7  |   00000000  |
+#  15   |  3c089321  |   1427c284  |   cc0509e5  |   a21d6263  |   dca0aa7e  |   58099079  |   cc87eb3f  |   ccf4fcc6  |   c19bf174  |   00000280  |
+#  16   |  3c83e93c  |   3c089321  |   1427c284  |   cc0509e5  |   ce54877e  |   dca0aa7e  |   58099079  |   cc87eb3f  |   e49b69c1  |   3da2d349  |
+#  17   |  8b82af3d  |   3c83e93c  |   3c089321  |   1427c284  |   d21e075c  |   ce54877e  |   dca0aa7e  |   58099079  |   efbe4786  |   2f261049  |
+#  18   |  a5c5f78c  |   8b82af3d  |   3c83e93c  |   3c089321  |   6bbb0cdf  |   d21e075c  |   ce54877e  |   dca0aa7e  |   0fc19dc6  |   8941d6ea  |
+#  19   |  1e46b537  |   a5c5f78c  |   8b82af3d  |   3c83e93c  |   2a00f7c1  |   6bbb0cdf  |   d21e075c  |   ce54877e  |   240ca1cc  |   eb269bf3  |
+#  20   |  49a0dc59  |   1e46b537  |   a5c5f78c  |   8b82af3d  |   81608b57  |   2a00f7c1  |   6bbb0cdf  |   d21e075c  |   2de92c6f  |   518a45fd  |
+#  21   |  ec336f6f  |   49a0dc59  |   1e46b537  |   a5c5f78c  |   361e0a59  |   81608b57  |   2a00f7c1  |   6bbb0cdf  |   4a7484aa  |   9ebd4151  |
+#  22   |  f5aeb453  |   ec336f6f  |   49a0dc59  |   1e46b537  |   0183a870  |   361e0a59  |   81608b57  |   2a00f7c1  |   5cb0a9dc  |   6a5562e5  |
+#  23   |  4a3f05fa  |   f5aeb453  |   ec336f6f  |   49a0dc59  |   95bd6f1f  |   0183a870  |   361e0a59  |   81608b57  |   76f988da  |   46482722  |
+#  24   |  fa1a0f7e  |   4a3f05fa  |   f5aeb453  |   ec336f6f  |   16314cae  |   95bd6f1f  |   0183a870  |   361e0a59  |   983e5152  |   4c5a9d81  |
+#  25   |  71719063  |   fa1a0f7e  |   4a3f05fa  |   f5aeb453  |   b61a5171  |   16314cae  |   95bd6f1f  |   0183a870  |   a831c66d  |   a0a6d0ce  |
+#  26   |  cacdedf9  |   71719063  |   fa1a0f7e  |   4a3f05fa  |   ad3b3a81  |   b61a5171  |   16314cae  |   95bd6f1f  |   b00327c8  |   088a34f4  |
+#  27   |  ff529a15  |   cacdedf9  |   71719063  |   fa1a0f7e  |   246d485a  |   ad3b3a81  |   b61a5171  |   16314cae  |   bf597fc7  |   03e0f3f0  |
+#  28   |  c4c614e3  |   ff529a15  |   cacdedf9  |   71719063  |   de7b8004  |   246d485a  |   ad3b3a81  |   b61a5171  |   c6e00bf3  |   fba3e92a  |
+#  29   |  ce6c65f9  |   c4c614e3  |   ff529a15  |   cacdedf9  |   229b2d50  |   de7b8004  |   246d485a  |   ad3b3a81  |   d5a79147  |   d1dc5c95  |
+#  30   |  ee1d0988  |   ce6c65f9  |   c4c614e3  |   ff529a15  |   fce2556c  |   229b2d50  |   de7b8004  |   246d485a  |   06ca6351  |   d076f1d6  |
+#  31   |  b00ec7e7  |   ee1d0988  |   ce6c65f9  |   c4c614e3  |   dd2f4ae1  |   fce2556c  |   229b2d50  |   de7b8004  |   14292967  |   1364166a  |
+#  32   |  c0d566dd  |   b00ec7e7  |   ee1d0988  |   ce6c65f9  |   af6d8688  |   dd2f4ae1  |   fce2556c  |   229b2d50  |   27b70a85  |   98d81980  |
+#  33   |  da5b258d  |   c0d566dd  |   b00ec7e7  |   ee1d0988  |   b56a1b9a  |   af6d8688  |   dd2f4ae1  |   fce2556c  |   2e1b2138  |   732cf338  |
+#  34   |  e41ffc33  |   da5b258d  |   c0d566dd  |   b00ec7e7  |   cb6f711b  |   b56a1b9a  |   af6d8688  |   dd2f4ae1  |   4d2c6dfc  |   f94798cb  |
+#  35   |  2a254c9f  |   e41ffc33  |   da5b258d  |   c0d566dd  |   b26c9f86  |   cb6f711b  |   b56a1b9a  |   af6d8688  |   53380d13  |   309f8a42  |
+#  36   |  e1005cf4  |   2a254c9f  |   e41ffc33  |   da5b258d  |   7c73d88d  |   b26c9f86  |   cb6f711b  |   b56a1b9a  |   650a7354  |   43682a06  |
+#  37   |  fe4e19f5  |   e1005cf4  |   2a254c9f  |   e41ffc33  |   1a0f1610  |   7c73d88d  |   b26c9f86  |   cb6f711b  |   766a0abb  |   42c108f1  |
+#  38   |  d16ffcc9  |   fe4e19f5  |   e1005cf4  |   2a254c9f  |   432ff813  |   1a0f1610  |   7c73d88d  |   b26c9f86  |   81c2c92e  |   d399b25a  |
+#  39   |  ac15901b  |   d16ffcc9  |   fe4e19f5  |   e1005cf4  |   b7062cbd  |   432ff813  |   1a0f1610  |   7c73d88d  |   92722c85  |   310a2fb9  |
+#  40   |  32e84afb  |   ac15901b  |   d16ffcc9  |   fe4e19f5  |   da00a4fc  |   b7062cbd  |   432ff813  |   1a0f1610  |   a2bfe8a1  |   ec40a61d  |
+#  41   |  fd042eb3  |   32e84afb  |   ac15901b  |   d16ffcc9  |   109c0696  |   da00a4fc  |   b7062cbd  |   432ff813  |   a81a664b  |   5053b69d  |
+#  42   |  35110a1e  |   fd042eb3  |   32e84afb  |   ac15901b  |   b018cfb3  |   109c0696  |   da00a4fc  |   b7062cbd  |   c24b8b70  |   5da7fa18  |
+#  43   |  8195b5b6  |   35110a1e  |   fd042eb3  |   32e84afb  |   5f0da83b  |   b018cfb3  |   109c0696  |   da00a4fc  |   c76c51a3  |   a59bb8e3  |
+#  44   |  a0875712  |   8195b5b6  |   35110a1e  |   fd042eb3  |   c352b791  |   5f0da83b  |   b018cfb3  |   109c0696  |   d192e819  |   677a8610  |
+#  45   |  82c0e72b  |   a0875712  |   8195b5b6  |   35110a1e  |   d047634c  |   c352b791  |   5f0da83b  |   b018cfb3  |   d6990624  |   5c965743  |
+#  46   |  30f8ae26  |   82c0e72b  |   a0875712  |   8195b5b6  |   0b133f4c  |   d047634c  |   c352b791  |   5f0da83b  |   f40e3585  |   e925d1ba  |
+#  47   |  35b4c2e0  |   30f8ae26  |   82c0e72b  |   a0875712  |   f6d25ce5  |   0b133f4c  |   d047634c  |   c352b791  |   106aa070  |   f54e3208  |
+#  48   |  b9fca9c9  |   35b4c2e0  |   30f8ae26  |   82c0e72b  |   602bfcf1  |   f6d25ce5  |   0b133f4c  |   d047634c  |   19a4c116  |   7e4a0c29  |
+#  49   |  cbac1718  |   b9fca9c9  |   35b4c2e0  |   30f8ae26  |   49da8ff3  |   602bfcf1  |   f6d25ce5  |   0b133f4c  |   1e376c08  |   1f35a74b  |
+#  50   |  41f1923f  |   cbac1718  |   b9fca9c9  |   35b4c2e0  |   7ebc8115  |   49da8ff3  |   602bfcf1  |   f6d25ce5  |   2748774c  |   47539698  |
+#  51   |  fccf6708  |   41f1923f  |   cbac1718  |   b9fca9c9  |   e0b900cb  |   7ebc8115  |   49da8ff3  |   602bfcf1  |   34b0bcb5  |   0dcf7735  |
+#  52   |  7505d7b8  |   fccf6708  |   41f1923f  |   cbac1718  |   2a2d4e1f  |   e0b900cb  |   7ebc8115  |   49da8ff3  |   391c0cb3  |   026f74ae  |
+#  53   |  29a2ae8f  |   7505d7b8  |   fccf6708  |   41f1923f  |   c7acb25b  |   2a2d4e1f  |   e0b900cb  |   7ebc8115  |   4ed8aa4a  |   44a8e0f7  |
+#  54   |  be60d746  |   29a2ae8f  |   7505d7b8  |   fccf6708  |   4e1ea7ed  |   c7acb25b  |   2a2d4e1f  |   e0b900cb  |   5b9cca4f  |   1d575cf3  |
+#  55   |  f689ea3b  |   be60d746  |   29a2ae8f  |   7505d7b8  |   1f479d87  |   4e1ea7ed  |   c7acb25b  |   2a2d4e1f  |   682e6ff3  |   2ba08b7a  |
+#  56   |  f5964906  |   f689ea3b  |   be60d746  |   29a2ae8f  |   20261194  |   1f479d87  |   4e1ea7ed  |   c7acb25b  |   748f82ee  |   2e648be8  |
+#  57   |  547dc20f  |   f5964906  |   f689ea3b  |   be60d746  |   db298073  |   20261194  |   1f479d87  |   4e1ea7ed  |   78a5636f  |   b209ad99  |
+#  58   |  d1eb96f0  |   547dc20f  |   f5964906  |   f689ea3b  |   6940b5eb  |   db298073  |   20261194  |   1f479d87  |   84c87814  |   7dbaa634  |
+#  59   |  c273c1f7  |   d1eb96f0  |   547dc20f  |   f5964906  |   b5564085  |   6940b5eb  |   db298073  |   20261194  |   8cc70208  |   190456cf  |
+#  60   |  9715bb9f  |   c273c1f7  |   d1eb96f0  |   547dc20f  |   8c0b04c4  |   b5564085  |   6940b5eb  |   db298073  |   90befffa  |   cce2782d  |
+#  61   |  6f69d919  |   9715bb9f  |   c273c1f7  |   d1eb96f0  |   809c5f1b  |   8c0b04c4  |   b5564085  |   6940b5eb  |   a4506ceb  |   383e2eca  |
+#  62   |  a871bc0e  |   6f69d919  |   9715bb9f  |   c273c1f7  |   7e7610aa  |   809c5f1b  |   8c0b04c4  |   b5564085  |   bef9a3f7  |   0ba82c1d  |
+# hreg[0]: 8853d7a3 = fc48d2df + 8c0b04c4
+# hreg[1]: 168c7649 = 95f0172e + 809c5f1b
+# hreg[2]: cb31ac39 = 4cbb9b8f + 7e7610aa
+# hreg[3]: de7d29f1 = c3c1b9e4 + 1abb700d
+# hreg[4]: 7c4cb374 = e536f7d5 + 9715bb9f
+# hreg[5]: 3a842d4d = cb1a5434 + 6f69d919
+# hreg[6]: b4dafe28 = 0c69421a + a871bc0e
+# hreg[7]: 70bcb8f1 = dc6a3b8d + 94527d64
+#  63   |  94527d64  |   a871bc0e  |   6f69d919  |   9715bb9f  |   1abb700d  |   7e7610aa  |   809c5f1b  |   8c0b04c4  |   c67178f2  |   d4a49c92  |
+# out_hash_2  = 70bcb8f1b4dafe283a842d4d7c4cb374de7d29f1cb31ac39168c76498853d7a3
+# A  = 6a09e667
+# B  = bb67ae85
+# C  = 3c6ef372
+# D  = a54ff53a
+# E  = 510e527f
+# F  = 9b05688c
+# G  = 1f83d9ab
+# H  = 5be0cd19
+# wrd_ary[0]  = 70bcb8f1
+# wrd_ary[1]  = b4dafe28
+# wrd_ary[2]  = 3a842d4d
+# wrd_ary[3]  = 7c4cb374
+# wrd_ary[4]  = de7d29f1
+# wrd_ary[5]  = cb31ac39
+# wrd_ary[6]  = 168c7649
+# wrd_ary[7]  = 8853d7a3
+# wrd_ary[8]  = 80000000
+# wrd_ary[9]  = 00000000
+# wrd_ary[10]  = 00000000
+# wrd_ary[11]  = 00000000
+# wrd_ary[12]  = 00000000
+# wrd_ary[13]  = 00000000
+# wrd_ary[14]  = 00000000
+# wrd_ary[15]  = 00000100
+# idx   |     A      |      B      |      C      |      D      |      E      |      F      |      G      |      H      |      kt     |      wt     |
+# --------------------------------------------------------------------------------------------------------------------------------------------------
+#   0   |  6a09e667  |   bb67ae85  |   3c6ef372  |   a54ff53a  |   510e527f  |   9b05688c  |   1f83d9ab  |   5be0cd19  |   428a2f98  |   70bcb8f1  |
+#   0   |  6cc5413e  |   6a09e667  |   bb67ae85  |   3c6ef372  |   09849b93  |   510e527f  |   9b05688c  |   1f83d9ab  |   428a2f98  |   70bcb8f1  |
+#   1   |  c6b32ff9  |   6cc5413e  |   6a09e667  |   bb67ae85  |   11156d6e  |   09849b93  |   510e527f  |   9b05688c  |   71374491  |   b4dafe28  |
+#   2   |  9ce7edc7  |   c6b32ff9  |   6cc5413e  |   6a09e667  |   26f11b50  |   11156d6e  |   09849b93  |   510e527f  |   b5c0fbcf  |   3a842d4d  |
+#   3   |  f5d28df4  |   9ce7edc7  |   c6b32ff9  |   6cc5413e  |   7c43041f  |   26f11b50  |   11156d6e  |   09849b93  |   e9b5dba5  |   7c4cb374  |
+#   4   |  14230950  |   f5d28df4  |   9ce7edc7  |   c6b32ff9  |   930fbe5b  |   7c43041f  |   26f11b50  |   11156d6e  |   3956c25b  |   de7d29f1  |
+#   5   |  e69d546a  |   14230950  |   f5d28df4  |   9ce7edc7  |   54bfd373  |   930fbe5b  |   7c43041f  |   26f11b50  |   59f111f1  |   cb31ac39  |
+#   6   |  69135393  |   e69d546a  |   14230950  |   f5d28df4  |   a1c66980  |   54bfd373  |   930fbe5b  |   7c43041f  |   923f82a4  |   168c7649  |
+#   7   |  03901659  |   69135393  |   e69d546a  |   14230950  |   89bd8121  |   a1c66980  |   54bfd373  |   930fbe5b  |   ab1c5ed5  |   8853d7a3  |
+#   8   |  537be128  |   03901659  |   69135393  |   e69d546a  |   51981705  |   89bd8121  |   a1c66980  |   54bfd373  |   d807aa98  |   80000000  |
+#   9   |  78357fdc  |   537be128  |   03901659  |   69135393  |   29a6be55  |   51981705  |   89bd8121  |   a1c66980  |   12835b01  |   00000000  |
+#  10   |  1d30f231  |   78357fdc  |   537be128  |   03901659  |   fe00deb0  |   29a6be55  |   51981705  |   89bd8121  |   243185be  |   00000000  |
+#  11   |  8c293dce  |   1d30f231  |   78357fdc  |   537be128  |   217b4f70  |   fe00deb0  |   29a6be55  |   51981705  |   550c7dc3  |   00000000  |
+#  12   |  85bc80d8  |   8c293dce  |   1d30f231  |   78357fdc  |   d37dce1a  |   217b4f70  |   fe00deb0  |   29a6be55  |   72be5d74  |   00000000  |
+#  13   |  51d08587  |   85bc80d8  |   8c293dce  |   1d30f231  |   6724e4c7  |   d37dce1a  |   217b4f70  |   fe00deb0  |   80deb1fe  |   00000000  |
+#  14   |  347001b5  |   51d08587  |   85bc80d8  |   8c293dce  |   118fbb76  |   6724e4c7  |   d37dce1a  |   217b4f70  |   9bdc06a7  |   00000000  |
+#  15   |  ae89d315  |   347001b5  |   51d08587  |   85bc80d8  |   a40f1812  |   118fbb76  |   6724e4c7  |   d37dce1a  |   c19bf174  |   00000100  |
+#  16   |  bcdb4149  |   ae89d315  |   347001b5  |   51d08587  |   3983ea5b  |   a40f1812  |   118fbb76  |   6724e4c7  |   e49b69c1  |   69358000  |
+#  17   |  6eaf6ad5  |   bcdb4149  |   ae89d315  |   347001b5  |   fb289ecc  |   3983ea5b  |   a40f1812  |   118fbb76  |   efbe4786  |   4bf1c17a  |
+#  18   |  b21774b8  |   6eaf6ad5  |   bcdb4149  |   ae89d315  |   875038a4  |   fb289ecc  |   3983ea5b  |   a40f1812  |   0fc19dc6  |   764ab244  |
+#  19   |  4c400af5  |   b21774b8  |   6eaf6ad5  |   bcdb4149  |   6797cdd4  |   875038a4  |   fb289ecc  |   3983ea5b  |   240ca1cc  |   06dc6d5c  |
+#  20   |  8a250f18  |   4c400af5  |   b21774b8  |   6eaf6ad5  |   d4672fe0  |   6797cdd4  |   875038a4  |   fb289ecc  |   2de92c6f  |   eff27544  |
+#  21   |  45ac5555  |   8a250f18  |   4c400af5  |   b21774b8  |   5be540ac  |   d4672fe0  |   6797cdd4  |   875038a4  |   4a7484aa  |   13a4b46d  |
+#  22   |  7425799f  |   45ac5555  |   8a250f18  |   4c400af5  |   8f8471e1  |   5be540ac  |   d4672fe0  |   6797cdd4  |   5cb0a9dc  |   2eafcd32  |
+#  23   |  4a32d0c3  |   7425799f  |   45ac5555  |   8a250f18  |   ce38fbff  |   8f8471e1  |   5be540ac  |   d4672fe0  |   76f988da  |   cf493a2e  |
+#  24   |  7848c37a  |   4a32d0c3  |   7425799f  |   45ac5555  |   1e73982d  |   ce38fbff  |   8f8471e1  |   5be540ac  |   983e5152  |   eb26baeb  |
+#  25   |  6b7b233d  |   7848c37a  |   4a32d0c3  |   7425799f  |   923a8b3e  |   1e73982d  |   ce38fbff  |   8f8471e1  |   a831c66d  |   30ac1e47  |
+#  26   |  c9bc9db5  |   6b7b233d  |   7848c37a  |   4a32d0c3  |   23aded1e  |   923a8b3e  |   1e73982d  |   ce38fbff  |   b00327c8  |   90eeaeb5  |
+#  27   |  0dd36d91  |   c9bc9db5  |   6b7b233d  |   7848c37a  |   80d5fd68  |   23aded1e  |   923a8b3e  |   1e73982d  |   bf597fc7  |   7cd9ca88  |
+#  28   |  a084a1f3  |   0dd36d91  |   c9bc9db5  |   6b7b233d  |   6c8745f0  |   80d5fd68  |   23aded1e  |   923a8b3e  |   c6e00bf3  |   964cf62e  |
+#  29   |  3137e4ff  |   a084a1f3  |   0dd36d91  |   c9bc9db5  |   1de277b0  |   6c8745f0  |   80d5fd68  |   23aded1e  |   d5a79147  |   0ab9d4b7  |
+#  30   |  899fc35e  |   3137e4ff  |   a084a1f3  |   0dd36d91  |   fd9ceedc  |   1de277b0  |   6c8745f0  |   80d5fd68  |   06ca6351  |   b5804522  |
+#  31   |  abc32c9b  |   899fc35e  |   3137e4ff  |   a084a1f3  |   505ff21e  |   fd9ceedc  |   1de277b0  |   6c8745f0  |   14292967  |   29eb47b6  |
+#  32   |  8556e7b7  |   abc32c9b  |   899fc35e  |   3137e4ff  |   f9a3a93b  |   505ff21e  |   fd9ceedc  |   1de277b0  |   27b70a85  |   51b153f9  |
+#  33   |  9d76d5e7  |   8556e7b7  |   abc32c9b  |   899fc35e  |   bd5f85f8  |   f9a3a93b  |   505ff21e  |   fd9ceedc  |   2e1b2138  |   d2bcfa06  |
+#  34   |  70b8c08c  |   9d76d5e7  |   8556e7b7  |   abc32c9b  |   d9cadd79  |   bd5f85f8  |   f9a3a93b  |   505ff21e  |   4d2c6dfc  |   1a3da04c  |
+#  35   |  240daeba  |   70b8c08c  |   9d76d5e7  |   8556e7b7  |   3f0a9187  |   d9cadd79  |   bd5f85f8  |   f9a3a93b  |   53380d13  |   8911117f  |
+#  36   |  f42408cc  |   240daeba  |   70b8c08c  |   9d76d5e7  |   7ad58882  |   3f0a9187  |   d9cadd79  |   bd5f85f8  |   650a7354  |   541de638  |
+#  37   |  c84a66bf  |   f42408cc  |   240daeba  |   70b8c08c  |   06472357  |   7ad58882  |   3f0a9187  |   d9cadd79  |   766a0abb  |   069b9914  |
+#  38   |  322b4e6d  |   c84a66bf  |   f42408cc  |   240daeba  |   d061bb5e  |   06472357  |   7ad58882  |   3f0a9187  |   81c2c92e  |   b36543bf  |
+#  39   |  e449610a  |   322b4e6d  |   c84a66bf  |   f42408cc  |   8551cace  |   d061bb5e  |   06472357  |   7ad58882  |   92722c85  |   44ac1480  |
+#  40   |  375821f7  |   e449610a  |   322b4e6d  |   c84a66bf  |   b66f72fc  |   8551cace  |   d061bb5e  |   06472357  |   a2bfe8a1  |   574dc35e  |
+#  41   |  8d0760c7  |   375821f7  |   e449610a  |   322b4e6d  |   7c1ff7b6  |   b66f72fc  |   8551cace  |   d061bb5e  |   a81a664b  |   a63c2d09  |
+#  42   |  e89a8152  |   8d0760c7  |   375821f7  |   e449610a  |   7c7dbfba  |   7c1ff7b6  |   b66f72fc  |   8551cace  |   c24b8b70  |   e1918865  |
+#  43   |  c9814623  |   e89a8152  |   8d0760c7  |   375821f7  |   25fbd634  |   7c7dbfba  |   7c1ff7b6  |   b66f72fc  |   c76c51a3  |   d672bc4c  |
+#  44   |  2cc07349  |   c9814623  |   e89a8152  |   8d0760c7  |   d42ec259  |   25fbd634  |   7c7dbfba  |   7c1ff7b6  |   d192e819  |   ac5e436b  |
+#  45   |  7dc1dc88  |   2cc07349  |   c9814623  |   e89a8152  |   51949baa  |   d42ec259  |   25fbd634  |   7c7dbfba  |   d6990624  |   0a4d2b1c  |
+#  46   |  01e3c1ed  |   7dc1dc88  |   2cc07349  |   c9814623  |   807b345b  |   51949baa  |   d42ec259  |   25fbd634  |   f40e3585  |   9ca341d9  |
+#  47   |  afd3733d  |   01e3c1ed  |   7dc1dc88  |   2cc07349  |   8b7b9c35  |   807b345b  |   51949baa  |   d42ec259  |   106aa070  |   5e933eed  |
+#  48   |  8410059a  |   afd3733d  |   01e3c1ed  |   7dc1dc88  |   c337524b  |   8b7b9c35  |   807b345b  |   51949baa  |   19a4c116  |   ea51a832  |
+#  49   |  e52a543d  |   8410059a  |   afd3733d  |   01e3c1ed  |   0f52a312  |   c337524b  |   8b7b9c35  |   807b345b  |   1e376c08  |   a06bec85  |
+#  50   |  41798f9c  |   e52a543d  |   8410059a  |   afd3733d  |   2c55b083  |   0f52a312  |   c337524b  |   8b7b9c35  |   2748774c  |   7c45fae9  |
+#  51   |  da755d99  |   41798f9c  |   e52a543d  |   8410059a  |   3a8eb20c  |   2c55b083  |   0f52a312  |   c337524b  |   34b0bcb5  |   c50f65b9  |
+#  52   |  dfb89633  |   da755d99  |   41798f9c  |   e52a543d  |   53295a8b  |   3a8eb20c  |   2c55b083  |   0f52a312  |   391c0cb3  |   6f3cd7de  |
+#  53   |  40343f30  |   dfb89633  |   da755d99  |   41798f9c  |   a5bcdc9e  |   53295a8b  |   3a8eb20c  |   2c55b083  |   4ed8aa4a  |   3b7f0315  |
+#  54   |  fe35733f  |   40343f30  |   dfb89633  |   da755d99  |   2c07143d  |   a5bcdc9e  |   53295a8b  |   3a8eb20c  |   5b9cca4f  |   1044838a  |
+#  55   |  73f0e490  |   fe35733f  |   40343f30  |   dfb89633  |   bc73b85a  |   2c07143d  |   a5bcdc9e  |   53295a8b  |   682e6ff3  |   57755800  |
+#  56   |  92189dda  |   73f0e490  |   fe35733f  |   40343f30  |   03aed571  |   bc73b85a  |   2c07143d  |   a5bcdc9e  |   748f82ee  |   d6339f61  |
+#  57   |  01a1a877  |   92189dda  |   73f0e490  |   fe35733f  |   277f1413  |   03aed571  |   bc73b85a  |   2c07143d  |   78a5636f  |   df808e6c  |
+#  58   |  660f9d76  |   01a1a877  |   92189dda  |   73f0e490  |   4b22a8cd  |   277f1413  |   03aed571  |   bc73b85a  |   84c87814  |   8f7bd2c3  |
+#  59   |  478e8c4e  |   660f9d76  |   01a1a877  |   92189dda  |   6d30c4af  |   4b22a8cd  |   277f1413  |   03aed571  |   8cc70208  |   ee854839  |
+#  60   |  8fdab87f  |   478e8c4e  |   660f9d76  |   01a1a877  |   10c3236a  |   6d30c4af  |   4b22a8cd  |   277f1413  |   90befffa  |   ee91eccc  |
+#  61   |  e687daf7  |   8fdab87f  |   478e8c4e  |   660f9d76  |   55afb7fb  |   10c3236a  |   6d30c4af  |   4b22a8cd  |   a4506ceb  |   988d63f6  |
+#  62   |  e04c5b0b  |   e687daf7  |   8fdab87f  |   478e8c4e  |   4d5842e9  |   55afb7fb  |   10c3236a  |   6d30c4af  |   bef9a3f7  |   deb0febe  |
+# hreg[0]: 6ca3f083 = 5be0cd19 + 10c3236a
+# hreg[1]: 753391a6 = 1f83d9ab + 55afb7fb
+# hreg[2]: e85dab75 = 9b05688c + 4d5842e9
+# hreg[3]: db04c61d = 510e527f + 89f6739e
+# hreg[4]: 352aadb9 = a54ff53a + 8fdab87f
+# hreg[5]: 22f6ce69 = 3c6ef372 + e687daf7
+# hreg[6]: 9bb40990 = bb67ae85 + e04c5b0b
+# hreg[7]: a460e357 = 6a09e667 + 3a56fcf0
+#  63   |  3a56fcf0  |   e04c5b0b  |   e687daf7  |   8fdab87f  |   89f6739e  |   4d5842e9  |   55afb7fb  |   10c3236a  |   c67178f2  |   64fcc71f  |
+# out_hash_3  = a460e3579bb4099022f6ce69352aadb9db04c61de85dab75753391a66ca3f083
