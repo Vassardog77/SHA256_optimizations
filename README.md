@@ -1,8 +1,9 @@
-Double SHA256 Optimization Project
+#Double SHA256 Optimization Project
+
 This project aims to improve the performance of the double SHA256 algorithm used in Bitcoin mining by adding several optimizations and ASIC boost support. The optimizations implemented in this project are intended to reduce the time and energy required to perform the SHA256 hashing operations.
 
-Getting Started
-Prerequisites
+##Getting Started
+###Prerequisites
 To build and run this project, you will need the following software:
 
 Git
